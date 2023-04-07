@@ -1,0 +1,19 @@
+#intro {
+    display: flex;
+
+}
+
+#Me{
+    width: 30%;
+    margin-left: 14%;
+    margin-top: 5%;
+}
+
+#ColeBranston_Image{
+    border-radius: 10%;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 30%;
+    height: 550px;
+    margin-left: 12.5%;
+}
