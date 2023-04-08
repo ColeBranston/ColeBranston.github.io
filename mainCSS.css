@@ -15,6 +15,26 @@ body{
     margin: 0;
     padding: 0;
     font-family: Condensed,sans-serif;
+    overflow-y: scroll;
+}
+
+.nav{
+    display: flex;
+    position: fixed;
+    float: right;
+    background-color: #240115;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.navButton{
+    width: 20%;
+    margin-left: 7%;
+    
+}
+
+.navbuttonTitle{
+    opacity: 1;
 }
 
 #aboutmeHeader{
