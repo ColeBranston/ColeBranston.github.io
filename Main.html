@@ -3,22 +3,29 @@
 <html>
     <link rel="stylesheet" href="mainCSS.css">
     <link rel="script" href="mainJs.js">
-    <title> Hi, I'm Cole Branston </title>
+    <title>Cole Branston</title>
 
     <body>
         <nav id = nav> 
             <div id=name>
-                <h1 class = navLink>Cole Branston</h1>
+                <h1 class = navLink>
+                    <a href = #bannerContainer>Cole Branston</a>
+                </h1>
             </div>
             <div class="navButton">
-                <h1 class = navLink>About</h1>
-            </div>
-            <div class="navButton">
-                <h1 class = navLink>Projects</h1>
+                <h1 class = navLink>
+                    <a href = #About exact = true>About</a>
+                </h1>
             </div>
 
             <div class="navButton">
-                <h1 class = navLink>Work</h1>
+                <h1 class = navLink>
+                    <a href = #Work >Work</a>
+                </h1>
+            </div>
+            
+            <div class="navButton">
+                <h1 class = navLink>Projects</h1>
             </div>
 
             <div class="navButton">
@@ -28,20 +35,62 @@
 
         <div id=bannerContainer>
             <div id=banner>
-                <h1 class="bodyText">Cole Branston</h1>
+                <h1 class="Header">Cole Branston</h1>
                 <h1 class="bodyText">UWO SE '28</h1> 
             </div>
         </div> 
 
+        <div id = About class=headerContainer> 
+            <h1 class=Header > About Me </h1>
+        </div>
+
+
         <div id = "intro">
             <div id = "Me">
-                <h1 class=bodyText> Hey I'm Cole, A student and software enthusiast </h1>
+                <h1 class=bodyText> Hey, I'm Cole, A student and software enthusiast </h1>
                 <h1 class=bodyText> I'm currently at Western University, studying Software Engineering.
             </div>
             <div id = ColeBranston_Image>
                 <img src="Images/colebranston_Image.jpg" alt="Cole Branston">
             </div>
         </div>
+        <div class = parallaxImage>
+            <div id=parallaxText>
+                <h1 class="frontText">With every success, comes a story</h1>
+            </div>
+        </div>
+
+        <div id= Work class=headerContainer> 
+            <h1 class=Header> Work Experience</h1>
+        </div>
+
+        <div id=workExperience>
+            <div class=sampleExperience> 
+                <div class=sampleHeader>
+                    <h1 class="bodyText"> SlyFox Web Design & Marketing (Intern) </h1>
+                    <h1 class=bodyText> test</h1>
+                </div>
+            </div>
+
+            <div class=sampleExperience> 
+                <div class=sampleHeader>
+                    <h1 class="bodyText"> McDonald's Crew Trainer </h1>
+                </div>
+            </div>
+
+            <div class=sampleExperience> 
+                <div class=sampleHeader>
+                    <h1 class="bodyText"> McDonald's Crew Member </h1>
+                </div>
+            </div>
+
+            <div class=sampleExperience> 
+                <div class=sampleHeader>
+                    <h1 class="bodyText"> B&B Lawncare (Owner/Operator) </h1>
+                </div>
+            </div>
+        </div>
+
 
     </body>
 </html>
