@@ -2,7 +2,7 @@
 
 <html>
     <link rel="stylesheet" href="mainCSS.css">
-    <link rel="script" href="mainJs.js">
+    <script src="mainJs.js"></script>
     <title>Cole Branston</title>
 
     <body>
@@ -25,11 +25,19 @@
             </div>
             
             <div class="navButton">
-                <h1 class = navLink>Projects</h1>
+                <h1 class = navLink>
+                    <a href=#Projects>Projects</a>
+                </h1>
             </div>
 
-            <div class="navButton">
-                <h1 class = navLink>Resume</h1>
+            <div id="naviconDiv" >
+                <a href="Resume/_ColeBranston-Resume.docx.pdf" target="_Blank">
+                    <h1 class = navlinkIcon>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16" height="2.9rem" width="2.9rem" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5 0h-12c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h12c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM13 14h-11v-12h11v12zM4 9h7v1h-7zM4 11h7v1h-7zM5 4.5c0-0.828 0.672-1.5 1.5-1.5s1.5 0.672 1.5 1.5c0 0.828-0.672 1.5-1.5 1.5s-1.5-0.672-1.5-1.5zM7.5 6h-2c-0.825 0-1.5 0.45-1.5 1v1h5v-1c0-0.55-0.675-1-1.5-1z"></path>
+                        </svg>
+                    </h1>
+                </a>
             </div>
         </nav>
 
@@ -43,7 +51,6 @@
         <div id = About class=headerContainer> 
             <h1 class=Header > About Me </h1>
         </div>
-
 
         <div id = "intro">
             <div id = "Me">
@@ -67,30 +74,83 @@
         <div id=workExperience>
             <div class=sampleExperience> 
                 <div class=sampleHeader>
-                    <h1 class="bodyText"> SlyFox Web Design & Marketing (Intern) </h1>
-                    <h1 class=bodyText> test</h1>
+                    <h1 class="sampleheaderText"> SlyFox Web Design & Marketing (Intern) </h1>
+                    <h2 class=bodyText> During my summer internship at SlyFox I designed websites for various clientele using HTML, CSS, and JavaScript.</h2>
+                </div>
+                <div class=imageDiv>
+                    <img src="Images/SlyFox_Image.jpg" alt="SlyFox Logo" class="Logo">
                 </div>
             </div>
 
             <div class=sampleExperience> 
                 <div class=sampleHeader>
-                    <h1 class="bodyText"> McDonald's Crew Trainer </h1>
+                    <h1 class="sampleheaderText"> McDonald's Crew Trainer </h1>
+                    <h2 class="bodyText">As a Crew Trainer, I was tasked with teaching more than 30+ trainees, several of whom became awards winning employees. I had to complete weekly evaluations of crew and take charge of the restaurant while managers were off the floor.</h2>
+                </div>
+                <div class=imageDiv>
+                    <img src="Images/McDonald's_Image.png" alt="McDonald's Logo" class="Logo">
                 </div>
             </div>
 
             <div class=sampleExperience> 
                 <div class=sampleHeader>
-                    <h1 class="bodyText"> McDonald's Crew Member </h1>
+                    <h1 class="sampleheaderText"> B&B Lawncare (Owner/Operator) </h1>
+                    <h2 class="bodyText"> Before getting part-time jobs, my brother and I created our own local lawncare bussiness. Initially, we went from house to house dropping off fliers and talking to possible clinetele. We were eventually able to take care of our entire block's properties.</h2>
                 </div>
-            </div>
-
-            <div class=sampleExperience> 
-                <div class=sampleHeader>
-                    <h1 class="bodyText"> B&B Lawncare (Owner/Operator) </h1>
+                <div class=imageDiv>
+                    <img src="Images/McDonald's_Image.png" alt="B&B Lawncare Logo" class="Logo">
                 </div>
             </div>
         </div>
 
+        <div id=Projects class="headerContainer">
+            <h1 class=Header> My Projects </h1>
+        </div>
+        <div id="myProjects">
+            <div id="column1" class = column>
+                <div class="box">
+                    <h1> Project 1 </h1>
+                </div>>
+            </div>
+
+            <div id="column2" class = column>
+                <div class="box">
+                    <h1> Project 2 </h1>
+                </div>>
+            </div>
+
+            <div id="column3" class = column>
+                <div class="box">
+                    <h1> Project 3 </h1>
+                </div>>
+            </div>
+        
+        </div>
+
+        <div id="contact">
+                    <div class="container">
+                        <div class="row">
+                            <div class="contact-left">
+                                <h1 class="sub-title">Contact Me</h1>
+                                <p>colebranston@gmail.com</p>
+                                <p>(519) 871-5615</p>
+                                <div class="social-icons">
+                                    <a href="https://github.com/AndrewStekar" target="_blank"></a>
+                                    <a href="https://www.linkedin.com/in/andrewstekar/" target="_blank"></a>
+                                </div>
+                            </div>
+                            <div class="contact-right">
+                                <form name="submit-to-google-sheet">
+                                    <input type="text" name="Name" placeholder="Your Name" required="">
+                                    <input type="email" name="Email" placeholder="Your Email" required="">
+                                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                    <button type="submit" class="btn btn2">Submit</button>
+                                </form>
+                                <span id="msg"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
     </body>
 </html>
