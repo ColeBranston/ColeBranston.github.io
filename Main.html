@@ -135,22 +135,42 @@
                                 <p>colebranston@gmail.com</p>
                                 <p>(519) 871-5615</p>
                                 <div class="social-icons">
-                                    <a href="https://github.com/AndrewStekar" target="_blank"></a>
-                                    <a href="https://www.linkedin.com/in/andrewstekar/" target="_blank"></a>
+                                    <a href="https://github.com/ColeBranston" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+                                    <a href="https://www.linkedin.com/in/cole-branston-2b6711238/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
                                 </div>
                             </div>
                             <div class="contact-right">
+
                                 <form name="submit-to-google-sheet">
-                                    <input type="text" name="Name" placeholder="Your Name" required="">
-                                    <input type="email" name="Email" placeholder="Your Email" required="">
-                                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                    <input type="text" name="Name" placeholder="Your Name" required>
+                                    <input type="email" name="Email" placeholder="Your Email" required>
+                                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
                                     <button type="submit" class="btn btn2">Submit</button>
                                 </form>
+                                
                                 <span id="msg"></span>
                             </div>
                         </div>
                     </div>
                 </div>
-
+            
+            <script src="https://kit.fontawesome.com/5694ef3c61.js" crossorigin="anonymous"></script>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbxpfGC4YSbpNX4E4wgWYh68qyy7XeGtjivL2mqHyV18kU2JlVTjB8NSxv8JrYOcvcp8/exec'
+                const form = document.forms['submit-to-google-sheet']
+                const msg = document.getElementById("msg")
+                form.addEventListener('submit', e => {
+                    e.preventDefault()
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        msg.innerHTML = "Message Sent Successfully"
+                        setTimeout(function(){
+                            msg.innerHTML = ""
+                        },7000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+                })
+            </script>
     </body>
 </html>

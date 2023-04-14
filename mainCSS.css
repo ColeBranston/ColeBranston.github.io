@@ -1,7 +1,6 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: #0c0c0c;
@@ -9,6 +8,7 @@ body{
 
 * {
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
 .bodyText{
@@ -46,7 +46,7 @@ body{
 }
 
 .navLink:hover{
-    color: #c6c4d4;
+    color: #cfccf1;
     transition: 0.25s ease;
     transform: translateY(-5px);
 }
@@ -58,7 +58,7 @@ body{
 }
 
 .navlinkIcon:hover{
-    color: #c6c4d4;
+    color: #cfccf1;
     transition: 0.25s ease;
 }
 
@@ -272,4 +272,23 @@ form .btn2{
 
 p {
     color: white;
+}
+
+i{
+    transition: 0.25s ease;
+    color: #6759b8;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+
+i:hover{
+    transition: 0.25s ease;
+    color: #cfccf1;
+}
+#msg{
+    color: #61b752;
+    margin-top: -1rem;
+    display: block;
+    text-align: center;
+
 }
