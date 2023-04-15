@@ -277,14 +277,27 @@ p {
 i{
     transition: 0.25s ease;
     color: #6759b8;
-    padding-right: 1rem;
-    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
 }
 
 i:hover{
     transition: 0.25s ease;
     color: #cfccf1;
 }
+
+#paperplaneIcon{
+    color: white;
+    padding-right: 1rem;
+    padding-top: 0rem;
+}
+
+#phoneIcon{
+    color: white;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+
 #msg{
     color: #61b752;
     margin-top: -1rem;
