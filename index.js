@@ -63,4 +63,6 @@ function formSubmit(){
             projectsLink.style.transform = "translateY(0)"
         }
 
+        console.log(top)
+
     }
