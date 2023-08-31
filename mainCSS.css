@@ -4,6 +4,7 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: #0c0c0c;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -38,6 +39,12 @@ body{
     text-align: center;
 }
 
+.navLink.a{
+    color: #cfccf1;
+    transition: 0.25s ease;
+    transform: translateY(-5px);
+}
+
 .navLink{
     transition: 0.60s ease;
     color: #6759b8;
@@ -46,9 +53,9 @@ body{
 }
 
 .navLink:hover{
-    color: #cfccf1;
-    transition: 0.25s ease;
-    transform: translateY(-5px);
+    color: #cfccf1 !important;
+    transition: 0.25s ease !important;
+    transform: translateY(-5px) !important;
 }
 
 .navlinkIcon{
@@ -106,7 +113,6 @@ nav a {
 }
 
 #ColeBranston_Image{
-    border-radius: 10%;
     overflow: hidden;
     border-radius: 50%;
     width: 30%;
@@ -300,7 +306,7 @@ i:hover{
 
 #msg{
     color: #61b752;
-    margin-top: -1rem;
+    margin-top: -2rem;
     display: block;
     text-align: center;
 
