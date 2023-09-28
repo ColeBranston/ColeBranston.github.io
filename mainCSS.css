@@ -282,7 +282,7 @@ p {
 }
 
 #arrowDiv {
-    text-align: center;
+    text-align: center !important;
     padding-top: 6%;
     padding-bottom: 7.5%;
 }
