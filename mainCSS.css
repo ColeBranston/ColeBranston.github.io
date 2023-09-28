@@ -1,13 +1,13 @@
+* {
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     padding: 0;
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: #0c0c0c;
-    scroll-behavior: smooth;
-}
-
-* {
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
