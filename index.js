@@ -21,7 +21,7 @@ function formSubmit(){
         const aboutLink = document.getElementById("aboutLink")
         const workLink = document.getElementById("workLink")
         const projectsLink = document.getElementById("projectsLink")
-        const thing = document.getElementById("column3")
+        var arrow = document.getElementById("downArrow")
         
         if (top < 250){
             homepage.style.color = "#cfccf1"
@@ -65,4 +65,11 @@ function formSubmit(){
 
         console.log(top)
 
+        arrow.style.transition = "0.4s ease"
+
+        if (top == 0){
+            arrow.style.opacity = "1"
+        }  else{
+            arrow.style.opacity = "0"
+        }
     }
