@@ -47,6 +47,7 @@ function formSubmit(){
             workLink.style.color = "#cfccf1"
             workLink.style.transition = "0.60s ease"
             workLink.style.transform = "translateY(-5px)"
+            
         }else{
             workLink.style.color = "#6759b8"
             workLink.style.transition = "0.60s ease"
@@ -63,7 +64,7 @@ function formSubmit(){
             projectsLink.style.transform = "translateY(0)"
         }
 
-        console.log(top)
+        // console.log(top)
 
         arrow.style.transition = "0.4s ease"
 

@@ -1,3 +1,4 @@
+
 * {
     scroll-behavior: smooth;
 }
@@ -11,6 +12,7 @@ body{
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
     width: 100%; 
+ 
 }
 
 .bodyText{
@@ -153,48 +155,9 @@ nav a {
     font-size: 3rem;
 }
 
-#workExperience{
+#skills {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.sampleExperience{
-    display: flex;
-    border: #423975 solid 0.5rem;
-    background-color: #1f1b38;
-    width: 80%;
-    border-radius: 0.5rem;
-    margin-top: 1rem;
-    padding-left: 2%;
-}
-
-.sampleHeader{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.sampleheaderText{
-    color: #a59de6;
-}
-
-.imageDiv{
-    display: flex;
-    width: 33%;
-    padding-left: 10%;
-    justify-content: center;
-    align-items: center;
-}
-
-.Logo{
-    border-radius: 10%;
-    overflow: hidden;
-    width:85%;
-    height:85%;
+    flex-direction: row;
 }
 
 #myProjects{
@@ -251,6 +214,10 @@ nav a {
     flex-basis: 60%;
 }
 
+.contact-left{
+    margin-top: -1.75%;
+}
+
 .social-icons a:hover{
     color: #ff004f;
     transform: translateY(-5px);
@@ -290,7 +257,7 @@ p {
 #downArrow{
     color: #b7aeff;
     transition:"0.60s ease";
-    animation: moveUpDown 0.7s ease infinite alternate;
+    animation: moveUpDown 0.7s ease infinite alternate !important;
 }
 
 @keyframes moveUpDown{
@@ -303,14 +270,16 @@ p {
     }
 }
 
-i:not(#downArrow):not(#paperplaneIcon):not(#phoneIcon){
+i:not(#downArrow, #paperplaneIcon, #phoneIcon) {
     transition: 0.25s ease;
     color: #6759b8;
     padding-right: 2rem;
     padding-top: 2rem;
+    text-shadow: 0 0 0.125em hsl(0 0% 10% / 0.3), 0 0 0.45em currentColor;
 }
 
-i:hover:not(#downArrow):not(#paperplaneIcon):not(#phoneIcon){
+
+i:hover:not(#downArrow, #paperplaneIcon, #phoneIcon)  {
     transition: 0.25s ease;
     color: #cfccf1;
 }
