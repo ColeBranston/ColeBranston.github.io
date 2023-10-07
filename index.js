@@ -21,7 +21,10 @@ function formSubmit(){
         const aboutLink = document.getElementById("aboutLink")
         const workLink = document.getElementById("workLink")
         const projectsLink = document.getElementById("projectsLink")
-        var arrow = document.getElementById("downArrow")
+        const arrow = document.getElementById("downArrow")
+        const workDiv = document.getElementById("Work")
+        const projectsDiv = document.getElementById("myProjects")
+        const projects = document.getElementById("projectsHeader")
         
         if (top < 250){
             homepage.style.color = "#cfccf1"
@@ -47,6 +50,7 @@ function formSubmit(){
             workLink.style.color = "#cfccf1"
             workLink.style.transition = "0.60s ease"
             workLink.style.transform = "translateY(-5px)"
+            workDiv.style.animation = "fadeUp 1s ease"
             
         }else{
             workLink.style.color = "#6759b8"
@@ -58,13 +62,16 @@ function formSubmit(){
             projectsLink.style.color = "#cfccf1"
             projectsLink.style.transition = "0.60s ease"
             projectsLink.style.transform = "translateY(-5px)"
+            projectsDiv.style.animation = "fadeUp 1s ease"
+            projects.style.animation = "fadeUp 1s ease"
+            
         }else{
             projectsLink.style.color = "#6759b8"
             projectsLink.style.transition = "0.60s ease"
             projectsLink.style.transform = "translateY(0)"
         }
 
-        // console.log(top)
+        console.log(top)
 
         arrow.style.transition = "0.4s ease"
 
@@ -73,4 +80,34 @@ function formSubmit(){
         }  else{
             arrow.style.opacity = "0"
         }
-    }
+    } 
+
+    function Clicked(n){
+        const header = document.getElementsByClassName("clickable")
+
+            switch(n){
+                case 0:
+                    header[1].style.color = "#b7aeff"
+                    header[1].style.textShadow = "none"
+
+                    header[2].style.color = "#b7aeff"
+                    header[2].style.textShadow = "none"
+                case 1:
+                    header[0].style.color = "#b7aeff"
+                    header[0].style.textShadow = "none"
+
+                    header[2].style.color = "#b7aeff"
+                    header[2].style.textShadow = "none"
+
+                case 2:
+                    header[1].style.color = "#b7aeff"
+                    header[1].style.textShadow = "none"
+
+                    header[0].style.color = "#b7aeff"
+                    header[0].style.textShadow = "none"
+
+                header[n].style.color = "white"
+                header[n].style.textShadow = "0 0 0.125em hsl(0 0% 10% / 0.3), 0 0 0.45em currentColor"
+
+            }
+        }
