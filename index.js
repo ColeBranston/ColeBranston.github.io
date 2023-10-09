@@ -1,3 +1,6 @@
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+
 function formSubmit(){
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxpfGC4YSbpNX4E4wgWYh68qyy7XeGtjivL2mqHyV18kU2JlVTjB8NSxv8JrYOcvcp8/exec'
     const form = document.forms['submit-to-google-sheet']
@@ -26,7 +29,7 @@ function formSubmit(){
         const projectsDiv = document.getElementById("myProjects")
         const projects = document.getElementById("projectsHeader")
         
-        if (top < 250){
+        if (top < aboutLink.offsetTop){
             homepage.style.color = "#cfccf1"
             homepage.style.transition = "0.60s ease"
             homepage.style.transform = "translateY(-5px)"
@@ -36,7 +39,7 @@ function formSubmit(){
             homepage.style.transform = "translateY(0)"
         }
 
-        if (top < 1112 && top > 531){
+        if (top < workDiv.offsetTop - vh + vh*0.08 && top >= aboutLink.offsetTop){
             aboutLink.style.color = "#cfccf1"
             aboutLink.style.transition = "0.60s ease"
             aboutLink.style.transform = "translateY(-5px)"
@@ -46,7 +49,7 @@ function formSubmit(){
             aboutLink.style.transform = "translateY(0)"
         }
 
-        if (top < 2666 && top > 1800){
+        if (top >= workDiv.offsetTop - vh + vh*0.08 && top < projectsDiv.offsetTop - vh + vh*0.08){
             workLink.style.color = "#cfccf1"
             workLink.style.transition = "0.60s ease"
             workLink.style.transform = "translateY(-5px)"
@@ -58,7 +61,7 @@ function formSubmit(){
             workLink.style.transform = "translateY(0)"
         }
 
-        if (top > 3000){
+        if (top >= projectsDiv.offsetTop - vh*1.08){
             projectsLink.style.color = "#cfccf1"
             projectsLink.style.transition = "0.60s ease"
             projectsLink.style.transform = "translateY(-5px)"
@@ -84,7 +87,8 @@ function formSubmit(){
 
     function Clicked(n){
         const header = document.getElementsByClassName("clickable")
-
+        const sliderText = document.getElementsByClassName("sliderText")
+    
             switch(n){
                 case 0:
                     header[1].style.color = "#b7aeff"
@@ -92,12 +96,46 @@ function formSubmit(){
 
                     header[2].style.color = "#b7aeff"
                     header[2].style.textShadow = "none"
+
+                    header[n].style.color = "white"
+                    header[n].style.textShadow = "0 0 0.125em hsl(0 0% 10% / 0.3), 0 0 0.45em currentColor"
+
+                    sliderText[0].style.transform = "translateX(0)"
+                    setTimeout(function(){
+                        sliderText[0].style.opacity = "1"
+                    },550)
+
+                    sliderText[1].style.opacity = "0"
+                    sliderText[1].style.transform = "translateX(-200%)"
+
+                    sliderText[2].style.opacity = "0"
+                    sliderText[2].style.transform = "translateX(-200%)"
+
+                    // For text disappearing I want it to move off screen to the left meaning transform = translateX(-1000px), then I should make it disappear by turning its opacity to 0 with opacity = "0"
+                    // For text appearing I want it to change translation back to its origin with transfrom = translateX(0) and then making its opacity = "1"
+                    break
+
                 case 1:
                     header[0].style.color = "#b7aeff"
                     header[0].style.textShadow = "none"
 
                     header[2].style.color = "#b7aeff"
                     header[2].style.textShadow = "none"
+
+                    header[n].style.color = "white"
+                    header[n].style.textShadow = "0 0 0.125em hsl(0 0% 10% / 0.3), 0 0 0.45em currentColor"
+
+                    sliderText[0].style.opacity = "0"
+                    sliderText[0].style.transform = "translateX(-200%)"
+
+                    sliderText[1].style.transform = "translateX(0)"
+                    setTimeout(function(){
+                        sliderText[1].style.opacity = "1"
+                    },550)
+
+                    sliderText[2].style.opacity = "0"
+                    sliderText[2].style.transform = "translateX(-200%)"
+                    break
 
                 case 2:
                     header[1].style.color = "#b7aeff"
@@ -106,8 +144,20 @@ function formSubmit(){
                     header[0].style.color = "#b7aeff"
                     header[0].style.textShadow = "none"
 
-                header[n].style.color = "white"
-                header[n].style.textShadow = "0 0 0.125em hsl(0 0% 10% / 0.3), 0 0 0.45em currentColor"
+                    header[n].style.color = "white"
+                    header[n].style.textShadow = "0 0 0.125em hsl(0 0% 10% / 0.3), 0 0 0.45em currentColor"
 
+                    sliderText[0].style.opacity = "0"
+                    sliderText[0].style.transform = "translateX(-200%)"
+
+                    sliderText[1].style.opacity = "0"
+                    sliderText[1].style.transform = "translateX(-200%)"
+                    
+                    sliderText[2].style.transform = "translateX(0)"
+                    setTimeout(function(){
+                        sliderText[2].style.opacity = "1"
+                    },550)
+                
+                    break
             }
         }

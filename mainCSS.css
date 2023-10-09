@@ -100,6 +100,10 @@ nav a {
     padding-left: 2%;
 }
 
+#Work { 
+    padding-bottom: 17.5%;
+}
+
 .Header{
     color: #b7aeff !important;
 }
@@ -244,8 +248,13 @@ form .btn2{
     cursor: pointer;
 }
 
-p {
+p, li {
     color: white;
+    margin: 0;
+}
+
+.p2 {
+
 }
 
 #arrowDiv {
@@ -326,7 +335,31 @@ i:hover:not(#downArrow, #paperplaneIcon, #phoneIcon)  {
 }
 
 .clickable:hover {
-    color: white;
+    color: white !important;
     transition: 0.25s ease !important;
     cursor: pointer;
+}
+
+#experienceText {
+    position: absolute;
+    transition: 0.7s ease;
+}
+
+.sliderText:not(#experienceText) {
+    opacity: 0;
+    position: absolute;
+    transition: 0.7s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+.title {
+    color: rgb(136, 57, 226);
+}
+
+.subtitle {
+    font-size: 85%;
+    color: #ababab;
 }
