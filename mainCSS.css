@@ -105,8 +105,14 @@ nav a {
     padding-bottom: 17.5%;
 }
 
-.Header{
-    color: #b7aeff !important;
+.Header:not(#skillsText, #homepage){
+    /* color: #cac4fd !important; */
+    color: white !important;
+    text-shadow: 0 0 0.125em hsl(0 0% 10% / 0.3), 0 0 0.45em currentColor;
+}
+
+#skillsText{
+    color: #cac4fd !important;
 }
 
 #intro{
