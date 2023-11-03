@@ -28,6 +28,7 @@ function formSubmit(){
         const workDiv = document.getElementById("Work")
         const projectsDiv = document.getElementById("myProjects")
         const projects = document.getElementById("projectsHeader")
+        const eachProject = document.getElementsByClassName("box")
         
         if (top < aboutLink.offsetTop){
             homepage.style.color = "#cfccf1"
@@ -73,6 +74,20 @@ function formSubmit(){
             projectsLink.style.transition = "0.60s ease"
             projectsLink.style.transform = "translateY(0)"
         }
+
+        // for (let i=0; i<eachProject.length; i++) {
+        //     if (top + vh*0.45 >= eachProject[i].offsetTop){
+        //         eachProject[i].style.transition = "0.60s ease"
+        //         eachProject[i].style.transform = "translateX(10vh)"
+                
+                
+        //     }
+
+        //     else {
+        //         eachProject[i].style.transform = "translateX(0)"
+                
+        //     }
+        // }
 
         console.log(top)
 
@@ -157,7 +172,6 @@ function formSubmit(){
                     setTimeout(function(){
                         sliderText[2].style.opacity = "1"
                     },550)
-                
                     break
             }
         }
