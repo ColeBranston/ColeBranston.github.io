@@ -124,6 +124,12 @@ nav a {
     width: 30%;
     margin-left: 14%;
     margin-top: 5%;
+    transition: 0.6s ease;
+}
+
+#desciption {
+    font-size: 2.5vh;
+    color: #9d8df5;
 }
 
 #ColeBranston_Image{
@@ -132,6 +138,35 @@ nav a {
     width: 30%;
     height: 33rem;
     margin-left: 12.5%;
+    transition: 0.6s ease;
+}
+
+@keyframes fadeRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-100vh);
+        transition: 0.6s ease;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+        transition: 0.6s ease;
+    }
+}
+
+@keyframes fadeLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(100vh);
+        transition: 0.6s ease;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+        transition: 0.6s ease;
+    }
 }
 
 .parallaxImage{
@@ -463,4 +498,14 @@ ul {
     z-index: 5;
     opacity: 0;
     transition: 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(32, 32, 32);
+    padding: 3.5vh;
+}
+
+#footerText {
+    color: #ababab;
 }

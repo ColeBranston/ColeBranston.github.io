@@ -28,7 +28,14 @@ function formSubmit(){
         const workDiv = document.getElementById("Work")
         const projectsDiv = document.getElementById("myProjects")
         const projects = document.getElementById("projectsHeader")
-        const eachProject = document.getElementsByClassName("box")
+        const personalDesc = document.getElementById("Me")
+        const personalImage = document.getElementById("ColeBranston_Image")
+
+        if (top > personalDesc.offsetTop - vh*1.08){
+            personalImage.style.animation = "fadeLeft 1s ease"
+            personalDesc.style.animation = "fadeRight 1s ease"
+            console.log("true")
+        }
         
         if (top < aboutLink.offsetTop){
             homepage.style.color = "#cfccf1"
@@ -75,21 +82,7 @@ function formSubmit(){
             projectsLink.style.transform = "translateY(0)"
         }
 
-        // for (let i=0; i<eachProject.length; i++) {
-        //     if (top + vh*0.45 >= eachProject[i].offsetTop){
-        //         eachProject[i].style.transition = "0.60s ease"
-        //         eachProject[i].style.transform = "translateX(10vh)"
-                
-                
-        //     }
-
-        //     else {
-        //         eachProject[i].style.transform = "translateX(0)"
-                
-        //     }
-        // }
-
-        console.log(top)
+        console.log(top, personalDesc.offsetTop)
 
         arrow.style.transition = "0.4s ease"
 
@@ -98,6 +91,7 @@ function formSubmit(){
         }  else{
             arrow.style.opacity = "0"
         }
+
     } 
 
     function Clicked(n){
