@@ -30,11 +30,16 @@ function formSubmit(){
         const projects = document.getElementById("projectsHeader")
         const personalDesc = document.getElementById("Me")
         const personalImage = document.getElementById("ColeBranston_Image")
+        const aboutHeader = document.getElementById("aboutmeHeader")
 
         if (top > personalDesc.offsetTop - vh*1.08){
             personalImage.style.animation = "fadeLeft 1s ease"
             personalDesc.style.animation = "fadeRight 1s ease"
             console.log("true")
+        }
+
+        if (top > aboutHeader.offsetTop - vh*1.08){
+            aboutHeader.style.animation = "fadeIn 1.7s ease"
         }
         
         if (top < aboutLink.offsetTop){

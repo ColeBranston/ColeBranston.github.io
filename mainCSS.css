@@ -169,6 +169,16 @@ nav a {
     }
 }
 
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
 .parallaxImage{
     background-attachment: fixed;
     background-image: url("Images/mountains_Image.jpg");
