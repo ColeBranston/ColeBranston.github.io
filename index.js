@@ -1,23 +1,6 @@
 const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
 
-function formSubmit(){
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxpfGC4YSbpNX4E4wgWYh68qyy7XeGtjivL2mqHyV18kU2JlVTjB8NSxv8JrYOcvcp8/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message Sent Successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },7000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })}
-
     window.onscroll = function(){
         var top = window.pageYOffset || document.documentElement.scrollTop;
         const homepage = document.getElementById("homepage")
@@ -35,7 +18,7 @@ function formSubmit(){
         if (top > personalDesc.offsetTop - vh*1.08){
             personalImage.style.animation = "fadeLeft 1s ease"
             personalDesc.style.animation = "fadeRight 1s ease"
-            console.log("true")
+
         }
 
         if (top > aboutHeader.offsetTop - vh*1.08){
@@ -86,8 +69,6 @@ function formSubmit(){
             projectsLink.style.transition = "0.60s ease"
             projectsLink.style.transform = "translateY(0)"
         }
-
-        console.log(top, personalDesc.offsetTop)
 
         arrow.style.transition = "0.4s ease"
 
