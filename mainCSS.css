@@ -1,3 +1,37 @@
+/* --------------------------------------css for small screens--------------------------------------- */
+
+/* Add this at the end of your CSS file */
+
+/* Mobile-first approach */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    #nav {
+        height: 12%; /* Adjust height of navigation bar for smaller screens */
+    }
+
+    #bannerContainer {
+        padding-top: 10%; /* Adjust padding for smaller screens */
+        padding-bottom: 3%; /* Adjust padding for smaller screens */
+    }
+
+    #Me,
+    #ColeBranston_Image {
+        width: 100%; /* Make images fill the width on smaller screens */
+        margin-left: 0; /* Remove margin for smaller screens */
+    }
+
+    .box {
+        width: 100%; /* Make project boxes fill the width on smaller screens */
+    }
+
+    #projectLinks {
+        margin-left: 0; /* Adjust the position of project links for smaller screens */
+        margin-top: 5vh;
+    }
+}
 
 /* --------------------------------------Base CSS--------------------------------------- */
 
@@ -69,7 +103,7 @@ body{
 .navlinkIcon{
     transition: 0.60s ease;
     color: #6759b8;
-    border-bottom: transparent solid 3px;
+    border-bottom: transparent solid 0.2rem;
 }
 
 .navlinkIcon:hover{
@@ -85,8 +119,8 @@ nav a {
 
 #bannerContainer{
     display: flex;
-    padding-top: 15%;
-    padding-bottom: 5%;
+    padding-top: 17em;
+    padding-bottom: 3em;
     justify-content: center;
     text-align: center;
 }
@@ -95,7 +129,7 @@ nav a {
     border: #6759b8 solid 0.3em;
     border-radius: 1em;
     padding-left: 1.4em;
-    padding-right: 1.4em;
+    padding-right: 1em;
     font-size: 2rem;
 }
 
@@ -524,39 +558,4 @@ footer {
     color: #ababab;
 }
 
-}
-
-/* --------------------------------------css for small screens--------------------------------------- */
-
-/* Add this at the end of your CSS file */
-
-/* Mobile-first approach */
-@media only screen and (max-width: 600px) {
-    body {
-        font-size: 16px; /* Adjust font size for smaller screens */
-    }
-
-    #nav {
-        height: 12%; /* Adjust height of navigation bar for smaller screens */
-    }
-
-    #bannerContainer {
-        padding-top: 10%; /* Adjust padding for smaller screens */
-        padding-bottom: 3%; /* Adjust padding for smaller screens */
-    }
-
-    #Me,
-    #ColeBranston_Image {
-        width: 100%; /* Make images fill the width on smaller screens */
-        margin-left: 0; /* Remove margin for smaller screens */
-    }
-
-    .box {
-        width: 100%; /* Make project boxes fill the width on smaller screens */
-    }
-
-    #projectLinks {
-        margin-left: 0; /* Adjust the position of project links for smaller screens */
-        margin-top: 5vh;
-    }
 }
